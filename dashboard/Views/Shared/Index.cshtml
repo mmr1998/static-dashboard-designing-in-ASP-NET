@@ -1,0 +1,29 @@
+﻿@*@if (cActorId == "")
+{
+    break;
+}*@
+
+
+@*<div style="float: left;"
+     @Html.Raw(Convert.ToInt64(Context.Session.GetString("session_currentActiveActorTab")) == -1 && Convert.ToInt64(cActorId.Substring(0, cActorId.IndexOf("_"))) == -1 ? "class=\"tab-pane fade in active\"" : Convert.ToInt64(Context.Session.GetString("session_currentActiveActorTab")) == 1 && Convert.ToInt64(cActorId.Substring(0, cActorId.IndexOf("_"))) == 1 ? "class=\"tab-pane fade in active\"" : Convert.ToInt64(Context.Session.GetString("session_currentActiveActorTab")) == 2 && Convert.ToInt64(cActorId.Substring(0, cActorId.IndexOf("_"))) == 2 ? "class=\"tab-pane fade in active\"" : Convert.ToInt64(Context.Session.GetString("session_currentActiveActorTab")) == 3 && Convert.ToInt64(cActorId.Substring(0, cActorId.IndexOf("_"))) == 3 ? "class=\"tab-pane fade in active\"" : Convert.ToInt64(Context.Session.GetString("session_currentActiveActorTab")) == 11 && Convert.ToInt64(cActorId.Substring(0, cActorId.IndexOf("_"))) == 11 ? "class=\"tab-pane fade in active\"" : Convert.ToInt64(Context.Session.GetString("session_currentActiveActorTab")) == 10 && Convert.ToInt64(cActorId.Substring(0, cActorId.IndexOf("_"))) == 10 ? "class=\"tab-pane fade in active\"" : Convert.ToInt64(Context.Session.GetString("session_currentActiveActorTab")) == 12 && Convert.ToInt64(cActorId.Substring(0, cActorId.IndexOf("_"))) == 12 ? "class=\"tab-pane fade in active\"" : Convert.ToInt64(Context.Session.GetString("session_currentActiveActorTab")) == 13 && Convert.ToInt64(cActorId.Substring(0, cActorId.IndexOf("_"))) == 13 ? "class=\"tab-pane fade in active\"" : Convert.ToInt64(Context.Session.GetString("session_currentActiveActorTab")) == 14 && Convert.ToInt64(cActorId.Substring(0, cActorId.IndexOf("_"))) == 14 ? "class=\"tab-pane fade in active\"" : "class=\"tab-pane fade \"")
+     @Html.Raw(cActorId.Substring(0, cActorId.IndexOf("_")) == "-1" ? "id=\"UserPane\"" : cActorId.Substring(0, cActorId.IndexOf("_")) == "1" ? "id=\"OE_AdminPane\"" : cActorId.Substring(0, cActorId.IndexOf("_")) == "2" ? "id=\"OE_ManagerPane\"" : cActorId.Substring(0, cActorId.IndexOf("_")) == "3" ? "id=\"OE_WriterPane\"" : cActorId.Substring(0, cActorId.IndexOf("_")) == "11" ? "id=\"AdminPane\"" : cActorId.Substring(0, cActorId.IndexOf("_")) == "12" ? "id=\"RegisterPane\"" : cActorId.Substring(0, cActorId.IndexOf("_")) == "13" ? "id=\"AccountantPane\"" : cActorId.Substring(0, cActorId.IndexOf("_")) == "14" ? "id=\"TeacherPane\"" : "id=\"StudentPane\"")
+     @Html.Raw(cActorId.Substring(0, cActorId.IndexOf("_")) == "-1" ? "data-tab-id=\"tabUserPane\"" : cActorId.Substring(0, cActorId.IndexOf("_")) == "1" ? "data-tab-id=\"tabOE_AdminPane\"" : cActorId.Substring(0, cActorId.IndexOf("_")) == "2" ? "data-tab-id=\"tabOE_ManagerPane\"" : cActorId.Substring(0, cActorId.IndexOf("_")) == "3" ? "data-tab-id=\"tabOE_WriterPane\"" : cActorId.Substring(0, cActorId.IndexOf("_")) == "11" ? "data-tab-id=\"tabAdminPane\"" : cActorId.Substring(0, cActorId.IndexOf("_")) == "12" ? "data-tab-id=\"tabRegisterPane\"" : cActorId.Substring(0, cActorId.IndexOf("_")) == "13" ? "data-tab-id=\"tabAccountantPane\"" : cActorId.Substring(0, cActorId.IndexOf("_")) == "14" ? "data-tab-id=\"tabTeacherPane\"" : "data-tab-id=\"tabStudentPane\"")>
+
+    
+    @if (Convert.ToInt64(Context.Session.GetString("session_currentActiveActorTab")) == Convert.ToInt64(cActorId.Substring(0, cActorId.IndexOf("_"))) && Convert.ToInt64(Context.Session.GetString("session_currentUserInstitutionId")) == Convert.ToInt64(cActorId.Substring(cActorId.IndexOf("_") + 1, cActorId.Length - (cActorId.IndexOf("_") + 1))))
+    {
+        <div class="container">
+            <div class="backendmenu">
+
+                @await Html.PartialAsync("~/Areas/Institution/Views/Shared/_menuMain_d.cshtml", new ViewDataDictionary(ViewData) {
+               { "menuActorId", cActorId.Substring(0, cActorId.IndexOf("_")) },
+               {"currentSelectedTab", Convert.ToInt64( Context.Session.GetString("session_currentActiveActorTab")) }
+           })
+
+            </div>
+        </div>
+
+    }
+
+
+</div>*@

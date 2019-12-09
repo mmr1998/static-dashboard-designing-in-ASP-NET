@@ -1,0 +1,476 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    @*<meta name="viewport" content="width=device-width, initial-scale=1.0" />*@
+
+    @*[Riaz1-22/9/19]*@
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    @*[~Riaz1-22/9/19]*@
+    <title>@ViewData["Title"] - OurEdu</title>
+
+    <environment include="Development">
+        @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />*@
+
+        @*<link rel="stylesheet" href="~/css/layout.css" />*@
+        @*[Riaz-22/9/19]*@
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+        @*[~Riaz-22/9/19]*@
+    </environment>
+    
+</head>
+<body id="layout-backend">
+    <!--[NOTE: Header section]-->
+    @*@await Html.PartialAsync("~/Views/Shared/_headerMain_d.cshtml")
+        @RenderBody()*@
+
+    <div class="row">
+        <div class="container-fluid no-padding">
+            <section class="topber-section">
+                <div class="row">
+                    <div class="container-fluid custom-color">
+                        <div class="container">
+                            <div class="col-md-12 col-lg-12 col-sm-12">
+                                <div class="top-ber">
+                                    <div class="float-left col-lg-6 col-md-6 col-sm-12 top-content">
+                                        <p>Welcome to the Dashboard!</p>
+                                    </div>
+                                    <div class="text-right col-lg-6 col-md-6 col-sm-12 top-content">
+                                        <p>Hello Mr. ABCD EFGH!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="clearfix"></div>
+            <section class="title-section">
+                <div class="row page-title">
+                    <div class="container">
+                        <div class="container-fluid">
+                            <div class="col-lg-4 col-md-4 col-sm-12 page-title">
+                                <h2>Dashboard</h2>
+                                <p>Here you can see all the things!</p>
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-sm-12">
+                                <div class="text-center banner-img">
+                                    <img class="img-fluid" src="img/banner.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="clearfix"></div>
+            <section class="tab-section">
+                <div class="row">
+                    <div id="fit" class="container-fluid sticky-tabs">
+                        <div class="container">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <ul class="tab-title">
+                                    <li class="tablinks" onclick="tabFunction(event, 'Admin')" id="defaultOpen"><a>Admin</a></li>
+                                    <li class="tablinks" onclick="tabFunction(event, 'User1')"><a>User 1</a></li>
+                                    <li class="tablinks" onclick="tabFunction(event, 'User2')"><a>User 2</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="clearfix"></div>
+            <section class="first-content-section">
+                <div class="row">
+                    <div id="Admin" class="container-fluid tabcontent first">
+                        <div class="container">
+                            <div class="col-lg-12 col-sm-12 col-md-12">
+                                <div class="col-lg-3 col-md-3 col-sm-6 left-bar">
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <h3 class="menu-title">Admin Menu</h3>
+                                        <div class="dr-menu">
+                                            <ul class="menu-list">
+                                                <li class="list-item"> <div class="icon home"></div> <a href="#">Admin Home</a></li>
+                                                <li class="list-item dropdown-btn">
+                                                    <div class="icon management"></div> <a class="sec-item"> <span>Admin Management</span><div class="arrow"></div></a>
+                                                    <ul class="sub-menu-list">
+                                                        <li class="list-item"> <div class="icon staff"></div><a href="#">Admin staff</a></li>
+                                                        <li class="list-item"> <div class="icon school"></div><a href="#">school</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-item dropdown-btn">
+                                                    <div class="icon accounts"></div> <a class="sec-item"> <span>Accounts</span><div class="arrow"></div></a>
+                                                    <ul class="sub-menu-list">
+                                                        <li class="list-item"> <div class="icon debit"></div><a href="#">Debit</a></li>
+                                                        <li class="list-item"> <div class="icon credit"></div><a href="#">Credit</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-item dropdown-btn">
+                                                    <div class="icon teacher"></div> <a class="sec-item"> <span> Teacher</span><div class="arrow"></div></a>
+                                                    <ul class="sub-menu-list">
+                                                        <li class="list-item"><div class="icon part-time"></div> <a href="#">Part-time</a></li>
+                                                        <li class="list-item"><div class="icon full-time"></div> <a href="#">Full-time</a></li>
+                                                        <li class="list-item"><div class="icon guest-speaker"></div> <a href="#">Guest Speaker</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-item dropdown-btn">
+                                                    <div class="icon student"></div> <a class="sec-item"> <span>Student</span><div class="arrow"></div></a>
+                                                    <ul class="sub-menu-list">
+                                                        <li class="list-item"> <div class="icon student-list"></div><a href="#">Student list</a></li>
+                                                        <li class="list-item"> <div class="icon manage-student"></div><a href="#">Manage Student</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-item dropdown-btn">
+                                                    <div class="icon result"></div> <a class="sec-item"> <span> result</span><div class="arrow"></div></a>
+                                                    <ul class="sub-menu-list">
+                                                        <li class="list-item"><div class="icon view-result"></div> <a href="#">View Result</a></li>
+                                                        <li class="list-item"><div class="icon manage-result"></div> <a href="#">Manage Result</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-item dropdown-btn">
+                                                    <div class="icon report"></div> <a class="sec-item"> <span> Reports</span><div class="arrow"></div></a>
+                                                    <ul class="sub-menu-list">
+                                                        <li class="list-item"><div class="icon student"></div> <a href="#">student</a></li>
+                                                        <li class="list-item"><div class="icon teacher"></div> <a href="#">teacher</a></li>
+                                                        <li class="list-item"><div class="icon accounts"></div> <a href="#">accounts</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-item dropdown-btn">
+                                                    <div class="icon profile"></div><a class="sec-item"> <span>profile</span><div class="arrow"></div></a>
+                                                    <ul class="sub-menu-list">
+                                                        <li class="list-item"><div class="icon view-profile"></div> <a href="#">view-profile</a></li>
+                                                        <li class="list-item"><div class="icon update-profile"></div> <a href="#">update-profile</a></li>
+                                                        <li class="list-item"><div class="icon change-pass"></div> <a href="#">change-pass</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-item"><div class="icon about"></div> <a href="#">about</a></li>
+                                                <li class="list-item"><div class="icon contact"></div> <a href="#">contact</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-9 col-md-9 col-sm-6 right-content">
+                                    <div class="container-fluid">
+                                        @RenderBody()
+                                        @*<h3>This is for Admin tab</h3>
+        <p>The navbar will stick to the top when you reach its scroll position.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <h3>This is for Admin tab</h3>
+        <p>The navbar will stick to the top when you reach its scroll position.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+
+        <h3>This is for Admin tab</h3>
+        <p>The navbar will stick to the top when you reach its scroll position.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>*@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="clearfix"></div>
+            <section class="second-content-section">
+                <div class="row">
+                    <div id="User1" class="container-fluid tabcontent first">
+                        <div class="container">
+                            <div class="col-lg-12 col-sm-12 col-md-12">
+                                <div class="col-lg-3 col-md-3 col-sm-6 left-bar">
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <h3 class="menu-title">User 1 Menu</h3>
+                                        <div class="dr-menu">
+                                            <ul class="menu-list">
+                                                <li class="list-item"> <div class="icon home"></div> <a href="#">User 1 Home</a></li>
+                                                <li class="list-item dropdown-btn">
+                                                    <div class="icon management"></div> <a class="sec-item"> <span>User 1 Management</span><div class="arrow"></div></a>
+                                                    <ul class="sub-menu-list">
+                                                        <li class="list-item"> <div class="icon staff"></div><a href="#">Admin staff</a></li>
+                                                        <li class="list-item"> <div class="icon school"></div><a href="#">school</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-item dropdown-btn">
+                                                    <div class="icon accounts"></div> <a class="sec-item"> <span>Accounts</span><div class="arrow"></div></a>
+                                                    <ul class="sub-menu-list">
+                                                        <li class="list-item"> <div class="icon debit"></div><a href="#">Debit</a></li>
+                                                        <li class="list-item"> <div class="icon credit"></div><a href="#">Credit</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-item dropdown-btn">
+                                                    <div class="icon teacher"></div> <a class="sec-item"> <span> Teacher</span><div class="arrow"></div></a>
+                                                    <ul class="sub-menu-list">
+                                                        <li class="list-item"><div class="icon part-time"></div> <a href="#">Part-time</a></li>
+                                                        <li class="list-item"><div class="icon full-time"></div> <a href="#">Full-time</a></li>
+                                                        <li class="list-item"><div class="icon guest-speaker"></div> <a href="#">Guest Speaker</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-item dropdown-btn">
+                                                    <div class="icon student"></div> <a class="sec-item"> <span>Student</span><div class="arrow"></div></a>
+                                                    <ul class="sub-menu-list">
+                                                        <li class="list-item"> <div class="icon student-list"></div><a href="#">Student list</a></li>
+                                                        <li class="list-item"> <div class="icon manage-student"></div><a href="#">Manage Student</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-item dropdown-btn">
+                                                    <div class="icon result"></div> <a class="sec-item"> <span> result</span><div class="arrow"></div></a>
+                                                    <ul class="sub-menu-list">
+                                                        <li class="list-item"><div class="icon view-result"></div> <a href="#">View Result</a></li>
+                                                        <li class="list-item"><div class="icon manage-result"></div> <a href="#">Manage Result</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-item dropdown-btn">
+                                                    <div class="icon report"></div> <a class="sec-item"> <span> Reports</span><div class="arrow"></div></a>
+                                                    <ul class="sub-menu-list">
+                                                        <li class="list-item"><div class="icon student"></div> <a href="#">student</a></li>
+                                                        <li class="list-item"><div class="icon teacher"></div> <a href="#">teacher</a></li>
+                                                        <li class="list-item"><div class="icon accounts"></div> <a href="#">accounts</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-item dropdown-btn">
+                                                    <div class="icon profile"></div><a class="sec-item"> <span>profile</span><div class="arrow"></div></a>
+                                                    <ul class="sub-menu-list">
+                                                        <li class="list-item"><div class="icon view-profile"></div> <a href="#">view-profile</a></li>
+                                                        <li class="list-item"><div class="icon update-profile"></div> <a href="#">update-profile</a></li>
+                                                        <li class="list-item"><div class="icon change-pass"></div> <a href="#">change-pass</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-item"><div class="icon about"></div> <a href="#">about</a></li>
+                                                <li class="list-item"><div class="icon contact"></div> <a href="#">contact</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-9 col-md-9 col-sm-6 right-content">
+                                    <h3>This is for User 1 tab</h3>
+                                    <p>The navbar will stick to the top when you reach its scroll position.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <h3>This is for User 1 tab</h3>
+                                    <p>The navbar will stick to the top when you reach its scroll position.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+
+                                    <h3>This is for User 1 tab</h3>
+                                    <p>The navbar will stick to the top when you reach its scroll position.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="clearfix"></div>
+            <section class="third-content-section">
+                <div class="row">
+                    <div id="User2" class="container-fluid tabcontent first">
+                        <div class="container">
+                            <div class="col-lg-12 col-sm-12 col-md-12">
+                                <div class="col-lg-3 col-md-3 col-sm-6 left-bar">
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <h3 class="menu-title">User 2 Menu</h3>
+                                        <div class="dr-menu">
+                                            <ul class="menu-list">
+                                                <li class="list-item"> <div class="icon home"></div> <a href="#">User 2 Home</a></li>
+                                                <li class="list-item dropdown-btn">
+                                                    <div class="icon management"></div> <a class="sec-item"> <span>User 2 Management</span><div class="arrow"></div></a>
+                                                    <ul class="sub-menu-list">
+                                                        <li class="list-item"> <div class="icon staff"></div><a href="#">Admin staff</a></li>
+                                                        <li class="list-item"> <div class="icon school"></div><a href="#">school</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-item dropdown-btn">
+                                                    <div class="icon accounts"></div> <a class="sec-item"> <span>Accounts</span><div class="arrow"></div></a>
+                                                    <ul class="sub-menu-list">
+                                                        <li class="list-item"> <div class="icon debit"></div><a href="#">Debit</a></li>
+                                                        <li class="list-item"> <div class="icon credit"></div><a href="#">Credit</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-item dropdown-btn">
+                                                    <div class="icon teacher"></div> <a class="sec-item"> <span> Teacher</span><div class="arrow"></div></a>
+                                                    <ul class="sub-menu-list">
+                                                        <li class="list-item"><div class="icon part-time"></div> <a href="#">Part-time</a></li>
+                                                        <li class="list-item"><div class="icon full-time"></div> <a href="#">Full-time</a></li>
+                                                        <li class="list-item"><div class="icon guest-speaker"></div> <a href="#">Guest Speaker</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-item dropdown-btn">
+                                                    <div class="icon student"></div> <a class="sec-item"> <span>Student</span><div class="arrow"></div></a>
+                                                    <ul class="sub-menu-list">
+                                                        <li class="list-item"> <div class="icon student-list"></div><a href="#">Student list</a></li>
+                                                        <li class="list-item"> <div class="icon manage-student"></div><a href="#">Manage Student</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-item dropdown-btn">
+                                                    <div class="icon result"></div> <a class="sec-item"> <span> result</span><div class="arrow"></div></a>
+                                                    <ul class="sub-menu-list">
+                                                        <li class="list-item"><div class="icon view-result"></div> <a href="#">View Result</a></li>
+                                                        <li class="list-item"><div class="icon manage-result"></div> <a href="#">Manage Result</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-item dropdown-btn">
+                                                    <div class="icon report"></div> <a class="sec-item"> <span> Reports</span><div class="arrow"></div></a>
+                                                    <ul class="sub-menu-list">
+                                                        <li class="list-item"><div class="icon student"></div> <a href="#">student</a></li>
+                                                        <li class="list-item"><div class="icon teacher"></div> <a href="#">teacher</a></li>
+                                                        <li class="list-item"><div class="icon accounts"></div> <a href="#">accounts</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-item dropdown-btn">
+                                                    <div class="icon profile"></div><a class="sec-item"> <span>profile</span><div class="arrow"></div></a>
+                                                    <ul class="sub-menu-list">
+                                                        <li class="list-item"><div class="icon view-profile"></div> <a href="#">view-profile</a></li>
+                                                        <li class="list-item"><div class="icon update-profile"></div> <a href="#">update-profile</a></li>
+                                                        <li class="list-item"><div class="icon change-pass"></div> <a href="#">change-pass</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-item"><div class="icon about"></div> <a href="#">about</a></li>
+                                                <li class="list-item"><div class="icon contact"></div> <a href="#">contact</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-9 col-md-9 col-sm-6 right-content">
+                                    <h3>This is for User 2 tab</h3>
+                                    <p>The navbar will stick to the top when you reach its scroll position.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <h3>This is for User 2 tab</h3>
+                                    <p>The navbar will stick to the top when you reach its scroll position.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+
+                                    <h3>This is for User 2 tab</h3>
+                                    <p>The navbar will stick to the top when you reach its scroll position.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    @*<partial name="_CookieConsentPartial" />*@
+
+
+
+    @*<environment include="Development">
+            <script src="~/lib/jquery/dist/jquery.js"></script>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+            <script src="~/js/site.js" asp-append-version="true"></script>
+        </environment>
+        <environment exclude="Development">
+            <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                    asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                    asp-fallback-test="window.jQuery"
+                    crossorigin="anonymous"
+                    integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+            </script>
+            <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                    asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                    asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                    crossorigin="anonymous"
+                    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+            </script>
+            <script src="~/js/site.min.js" asp-append-version="true"></script>
+        </environment>*@
+    <script>
+        //sticky tabs
+        window.onscroll = function () { stickyFunction() };
+
+        var navbar = document.getElementById("fit");
+        var sticky = navbar.offsetTop;
+
+        function stickyFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+        //tabs
+        function tabFunction(tabNo, tabID) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabID).style.display = "block";
+            tabNo.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+
+        //dropdown Menu
+
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var dr;
+
+        for (dr = 0; dr < dropdown.length; dr++) {
+            dropdown[dr].addEventListener("click", function () {
+                this.classList.toggle("active");
+            });
+        }
+    </script>
+
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>

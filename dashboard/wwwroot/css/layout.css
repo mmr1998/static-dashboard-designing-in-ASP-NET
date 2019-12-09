@@ -1,0 +1,276 @@
+﻿#layout-backend {
+    background-color: #e9ebee;
+    padding-bottom: 35px;
+    padding: 0 !important;
+}
+
+
+   
+    #layout-backend .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    #layout-backend .sticky + .content {
+            padding-top: 60px;
+        }
+#layout-backend .topber-section {
+    background: green;
+    padding: 6px 0;
+}
+    #layout-backend .topber-content {
+        margin: 0 auto;
+      }
+    #layout-backend .top-bar {
+        background: green;
+        padding: 6px 0;
+    }
+
+    #layout-backend .title-content{
+        height:120px;
+    }
+    #layout-backend .sticky-tabs {
+        background: beige;
+    }
+
+    #layout-backend .sticky-tabs.sticky {
+            z-index: 1000;
+        }
+    #layout-backend .tab-title li {
+        list-style: none;
+        float: left;
+        padding: 1% 3%;
+        border: 1px solid #dddfe2;
+        border-radius: 3px;
+        border-right: none;
+        cursor: pointer;
+    }
+    #layout-backend .tab-title li:last-child {
+            border-right: 1px solid #dddfe2;
+        }
+    #layout-backend .tab-title li.active a {
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+            color: inherit;
+        }
+    #layout-backend .tab-title li.active {
+            background: #e9ebee;
+            border-bottom: none;
+            cursor: default;
+        }
+    #layout-backend .tabcontent .right-content {
+        background: #f5f6f7;
+        margin: 2% 0;
+        border: 1px solid #dddfe2;
+        border-radius: 3px;
+        padding: 0;
+    }
+
+/*menu */
+.tabcontent .left-bar {
+    padding-top: 2%;
+    position: sticky;
+    top: 35px;
+    padding-right: 0;
+}
+
+.dropdown-btn.active .sub-menu-list {
+    display: block;
+}
+
+.dropdown-btn .sub-menu-list {
+    display: none;
+}
+
+.left-bar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-list .list-item a {
+    padding: 2%;
+    display: flex;
+    flex: 1 1 0px;
+}
+
+.menu-list .list-item:hover {
+    background-color: #f5f6f7;
+    border: 1px solid #dddfe2;
+    border-radius: 3px;
+}
+
+.dropdown-btn.active {
+    background-color: #f5f6f7;
+    border: 1px solid #dddfe2;
+    border-radius: 3px;
+}
+
+.menu-title {
+    background: #f5f6f7;
+    margin: 0;
+    padding: 1%;
+    font-family: sans-serif;
+    font-size: 30px;
+    text-align: center;
+    border: 1px solid #dddfe2;
+    border-radius: 3px;
+    margin-bottom: 5%;
+}
+
+.menu-list .list-item a {
+    color: inherit;
+}
+
+.menu-list > .list-item > a {
+    padding: 5%;
+}
+
+.menu-list > .list-item > .icon {
+    margin-top: 7px;
+}
+
+.menu-list .list-item a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.dropdown-btn .arrow {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 10px;
+    margin-top: 1%;
+    background: url(img/icons.png);
+    background-position: 0px 0px;
+}
+
+.dropdown-btn.active .arrow {
+    background-position: -16px -1px;
+}
+
+.dr-menu {
+    position: absolute;
+    width: 90%;
+    height: 85vh;
+    display: block;
+    overflow: auto;
+}
+
+.menu-list .icon {
+    width: 26px;
+    height: 25px;
+    background: url(img/all.png);
+    float: left;
+    margin-top: 2px;
+}
+
+.menu-list .dropdown-btn {
+    cursor: pointer;
+}
+
+.banner-img {
+    margin-top: 1.3%;
+}
+
+.list-item .home {
+    background-position: 56px -30px;
+}
+
+.list-item .management {
+    background-position: -4px -97px;
+}
+
+.list-item .accounts {
+    background-position: -5px -34px;
+}
+
+.list-item .teacher {
+    background-position: 26px -65px;
+}
+
+.list-item .student {
+    background-position: 82px -66px;
+}
+
+.list-item .result {
+    background-position: 110px -2px;
+}
+
+.list-item .report {
+    background-position: 136px -2px;
+}
+
+.list-item .profile {
+    background-position: -5px -68px;
+}
+
+.list-item .about {
+    background-position: 84px -2px;
+}
+
+.list-item .contact {
+    background-position: 57px -2px;
+}
+
+.list-item .staff {
+    background-position: 108px -66px;
+}
+
+.list-item .school {
+    background-position: 134px -64px;
+}
+
+.list-item .debit {
+    background-position: -34px -32px;
+}
+
+.list-item .credit {
+    background-position: 29px -1px;
+}
+
+.list-item .full-time {
+    background-position: -64px -33px;
+}
+
+.list-item .guest-speaker {
+    background-position: -88px -31px;
+}
+
+.list-item .student-list {
+    background-position: 55px -67px;
+}
+
+.list-item .manage-student {
+    background-position: 29px -30px;
+}
+
+.list-item .view-result {
+    background-position: 103px -95px;
+}
+
+.list-item .manage-result {
+    background-position: 76px -97px;
+}
+
+.list-item .view-profile {
+    background-position: 51px -95px;
+}
+
+.list-item .part-time {
+    background-position: -4px 1px;
+}
+
+.list-item .update-profile {
+    background-position: 26px -95px;
+}
+
+.list-item .change-pass {
+    background-position: -3px -124px;
+}
+
+.menu-list .sub-menu-list {
+    padding: 5%;
+    border-top: 1px solid #dddfe2;
+}
+
